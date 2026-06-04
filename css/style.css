@@ -1,0 +1,48 @@
+/* ミニマムリセットCSS */
+* {
+    box-sizing: border-box;
+    /* heightやwidthをpaddingとborderが含まれた寸法にする */
+
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    font: inherit;
+    /* 親要素と同じフォントにする */
+    cursor: pointer;
+}
+
+
+
+.app
+
+/*  このアプリ全体のレイアウトを決定する */
+    {
+    min-height: 100vh;
+    display: flex;
+    /* 要素をFlexBoxにする */
+
+    justify-content: center;
+    /* 要素を左右中央揃えにする */
+}
+
+.startScreen {
+    text-align: center;
+    padding-top: 30vh;
+}
+
+#startButton {
+    background-color: aquamarine;
+    border: 3px solid;
+    border-color: #6d55ab;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.4s ease;
+}
+
+#startButton:hover {
+    background-color: blueviolet;
+}
