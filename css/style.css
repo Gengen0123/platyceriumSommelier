@@ -1,10 +1,12 @@
-/* ミニマムリセットCSS */
+/* お手製リセットCSS */
 * {
     box-sizing: border-box;
     /* heightやwidthをpaddingとborderが含まれた寸法にする */
 
 }
 
+h1,
+p,
 body {
     margin: 0;
 }
@@ -16,11 +18,8 @@ button {
 }
 
 
-
-.app
-
 /*  このアプリ全体のレイアウトを決定する */
-    {
+.app {
     min-height: 100vh;
     display: flex;
     /* 要素をFlexBoxにする */
@@ -29,20 +28,37 @@ button {
     /* 要素を左右中央揃えにする */
 }
 
+/* スタート画面 */
 .startScreen {
+    min-height: 100vh;
     text-align: center;
-    padding-top: 30vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.startScreen h1 {
+    margin: 30vh 0 20vh;
+    font-size: 6vw;
+}
+
+.startScreen p {
+    line-height: 3;
+    padding: 0 10vw 0;
 }
 
 #startButton {
     background-color: aquamarine;
-    border: 3px solid;
-    border-color: #6d55ab;
-    border-radius: 10px;
-    padding: 10px;
-    transition: background-color 0.4s ease;
+    border: none;
+    border-radius: 30px;
+    padding: 30px;
+    margin: 10vw;
+    transition: background-color 0.2s ease;
+    font-size: 2em;
+    letter-spacing: 0.04em;
 }
 
 #startButton:hover {
-    background-color: blueviolet;
+    background-color: rgb(26, 67, 125);
+    color: #ffffff;
 }
