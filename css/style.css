@@ -37,14 +37,22 @@ button {
     flex-direction: column;
 }
 
-.startScreen h1 {
-    margin: 30vh 0 20vh;
+.titleBand {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    background-color: aquamarine;
+}
+
+.titleBand h1 {
+    margin: 20vh 0 20vh;
     font-size: 6vw;
 }
 
 .startScreen p {
-    line-height: 3;
-    padding: 0 10vw 0;
+    font-size: 1.3em;
+    line-height: 2;
+    padding: 5vh 10vw 5vh;
 }
 
 #startButton {
@@ -52,7 +60,7 @@ button {
     border: none;
     border-radius: 30px;
     padding: 30px;
-    margin: 10vw;
+    margin: 0 10vw 0;
     transition: background-color 0.2s ease;
     font-size: 2em;
     letter-spacing: 0.04em;
