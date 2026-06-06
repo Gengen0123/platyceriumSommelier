@@ -76,6 +76,27 @@ button {
     color: #ffffff;
 }
 
+
+/* 質問画面 */
+.question {
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 800px;
+    padding: 10vh 10vh;
+}
+
+.questionText {
+    margin-top: 2vh;
+}
+
+.answerList {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vh;
+
+
+}
+
 /* セクション毎の表示管理に使用 */
 /* hiddenだとブラウザ側で下記の操作をさせることになり、flexが自動でblockになってしまうっぽい */
 .screen {
