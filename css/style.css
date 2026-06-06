@@ -18,6 +18,7 @@ button {
 }
 
 
+
 /*  このアプリ全体のレイアウトを決定する */
 .app {
     min-height: 100vh;
@@ -28,10 +29,11 @@ button {
     /* 要素を左右中央揃えにする */
 }
 
+
+
 /* スタート画面 */
-.startScreen {
+.start {
     min-height: 100vh;
-    display: flex;
     flex-direction: column;
     /* 縦に要素を並べる */
 }
@@ -49,7 +51,7 @@ button {
     /* 最大、最小幅を指定できる 横長モニタ等で表示させるときに崩れない */
 }
 
-.startScreen p {
+.start p {
     text-align: center;
     font-size: 1.3em;
     line-height: 2;
@@ -72,4 +74,18 @@ button {
 #startButton:hover {
     background-color: rgb(26, 67, 125);
     color: #ffffff;
+}
+
+/* セクション毎の表示管理に使用 */
+/* hiddenだとブラウザ側で下記の操作をさせることになり、flexが自動でblockになってしまうっぽい */
+.screen {
+    display: none;
+}
+
+.start.active {
+    display: flex;
+}
+
+.question.active {
+    display: flex;
 }
