@@ -46,7 +46,8 @@ button {
 
 .titleBand h1 {
     margin: 20vh 0 20vh;
-    font-size: 6vw;
+    font-size: clamp(3em, 6vw, 6rem);
+    /* 最大、最小幅を指定できる 横長モニタ等で表示させるときに崩れない */
 }
 
 .startScreen p {
