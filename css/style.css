@@ -1,0 +1,75 @@
+/* お手製リセットCSS */
+* {
+    box-sizing: border-box;
+    /* heightやwidthをpaddingとborderが含まれた寸法にする */
+
+}
+
+h1,
+p,
+body {
+    margin: 0;
+}
+
+button {
+    font: inherit;
+    /* 親要素と同じフォントにする */
+    cursor: pointer;
+}
+
+
+/*  このアプリ全体のレイアウトを決定する */
+.app {
+    min-height: 100vh;
+    display: flex;
+    /* 要素をFlexBoxにする */
+
+    justify-content: center;
+    /* 要素を左右中央揃えにする */
+}
+
+/* スタート画面 */
+.startScreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* 縦に要素を並べる */
+}
+
+.titleBand {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    background-color: aquamarine;
+}
+
+.titleBand h1 {
+    margin: 20vh 0 20vh;
+    font-size: clamp(3em, 6vw, 6rem);
+    /* 最大、最小幅を指定できる 横長モニタ等で表示させるときに崩れない */
+}
+
+.startScreen p {
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 2;
+    padding: 5vh 10vw 5vh;
+}
+
+#startButton {
+    background-color: aquamarine;
+    border: none;
+    border-radius: 30px;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    transition: background-color 0.2s ease;
+    font-size: 2em;
+    letter-spacing: 0.04em;
+}
+
+#startButton:hover {
+    background-color: rgb(26, 67, 125);
+    color: #ffffff;
+}
