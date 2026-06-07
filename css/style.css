@@ -81,32 +81,45 @@ button {
 .question {
     flex-direction: column;
     min-height: 100vh;
-    max-width: 800px;
-    padding: 10vh 10vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 10vh;
 }
 
 .questionText {
     margin-top: 2vh;
 }
 
+.progress {
+    color: rgb(26, 67, 125);
+}
+
 .answerList {
     display: flex;
     flex-direction: column;
     padding-top: 3vh;
+}
 
+.answerButton {
+    margin: 10px 10px;
+    padding: 15px;
+    border: none;
+    background-color: aquamarine;
+    transition: background-color 0.2s;
+}
 
+.answerButton:hover {
+    background-color: rgb(26, 67, 125);
+    color: #ffffff;
 }
 
 /* セクション毎の表示管理に使用 */
-/* hiddenだとブラウザ側で下記の操作をさせることになり、flexが自動でblockになってしまうっぽい */
+/* hiddenだとdisplay:flexと衝突するかも　activeクラスで表示を管理 */
 .screen {
     display: none;
 }
 
-.start.active {
-    display: flex;
-}
-
+.start.active,
 .question.active {
     display: flex;
 }
