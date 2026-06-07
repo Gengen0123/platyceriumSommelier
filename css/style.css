@@ -18,6 +18,7 @@ button {
 }
 
 
+
 /*  このアプリ全体のレイアウトを決定する */
 .app {
     min-height: 100vh;
@@ -28,10 +29,11 @@ button {
     /* 要素を左右中央揃えにする */
 }
 
+
+
 /* スタート画面 */
-.startScreen {
+.start {
     min-height: 100vh;
-    display: flex;
     flex-direction: column;
     /* 縦に要素を並べる */
 }
@@ -49,7 +51,7 @@ button {
     /* 最大、最小幅を指定できる 横長モニタ等で表示させるときに崩れない */
 }
 
-.startScreen p {
+.start p {
     text-align: center;
     font-size: 1.3em;
     line-height: 2;
@@ -72,4 +74,52 @@ button {
 #startButton:hover {
     background-color: rgb(26, 67, 125);
     color: #ffffff;
+}
+
+
+/* 質問画面 */
+.question {
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 10vh;
+}
+
+.questionText {
+    margin-top: 2vh;
+}
+
+.progress {
+    color: rgb(26, 67, 125);
+}
+
+.answerList {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vh;
+}
+
+.answerButton {
+    margin: 10px 10px;
+    padding: 15px;
+    border: none;
+    background-color: aquamarine;
+    transition: background-color 0.2s;
+}
+
+.answerButton:hover {
+    background-color: rgb(26, 67, 125);
+    color: #ffffff;
+}
+
+/* セクション毎の表示管理に使用 */
+/* hiddenだとdisplay:flexと衝突するかも　activeクラスで表示を管理 */
+.screen {
+    display: none;
+}
+
+.start.active,
+.question.active {
+    display: flex;
 }
