@@ -87,7 +87,7 @@ a {
     min-height: 100vh;
     max-width: 400px;
     width: 100%;
-    padding-top: 10vh;
+    margin-top: 20px;
 }
 
 .questionText {
@@ -120,7 +120,27 @@ a {
 /* 結果画面 */
 .result {
     flex-direction: column;
+    min-height: 100vh;
+    max-width: 800px;
     align-items: center;
+}
+
+.result h1 {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.plantName {
+    font-size: 40px;
+}
+
+.resultImage {
+    width: 80vw;
+    height: auto;
+    max-width: 500px;
+    display: block;
+    margin: 25px 25px;
+    border-radius: 15%;
 }
 
 .search {
@@ -129,6 +149,7 @@ a {
     background-color: aquamarine;
     color: black;
 }
+
 
 /* セクション毎の表示管理に使用 */
 /* hiddenだとdisplay:flexと衝突するかも　activeクラスで表示を管理 */
