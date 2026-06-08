@@ -122,8 +122,15 @@ a {
     flex-direction: column;
     min-height: 100vh;
     max-width: 800px;
+    margin: 0 10vw 0;
+}
+
+.answerCard {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
+
 
 .result h1 {
     font-size: 25px;
@@ -143,13 +150,31 @@ a {
     border-radius: 15%;
 }
 
-.search {
+.result h2 {
+    color: aqua;
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.searchButton {
     display: inline-block;
     /* aタグはinline要素。widthやheight等を効かせるために設定。 */
     background-color: aquamarine;
     color: black;
+    width: 200px;
+    padding: 10px;
+    margin: 15px auto;
+    text-align: center;
 }
 
+.backToStartButton {
+    width: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+    background-color: aqua;
+}
 
 /* セクション毎の表示管理に使用 */
 /* hiddenだとdisplay:flexと衝突するかも　activeクラスで表示を管理 */
