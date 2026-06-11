@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ビカリエ</title>
     <link rel="stylesheet" href="css/style.css" class="rel">
-    <script src="js/main.js" defer></script> <!-- defarでHTMLを読み込み後にJSを実行 -->
+    <script src="js/questions.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/diagnosis.js" defer></script>
+    <script src="js/main.js" defer></script> <!-- deferでHTMLを読み込み後にJSを実行 -->
 </head>
 
 <body>
     <main class="app"> <!-- .appでアプリ全体のCSSを決める -->
-        <section id="startScreen" class="start screen">
+        <section id="startScreen" class="start screen active">
             <div class="titleBand">
                 <h1>ビカクシダソムリエ</h1>
             </div>
@@ -37,7 +40,7 @@
             </div>
         </section>
 
-        <section id="resultScreen" class="result screen active">
+        <section id="resultScreen" class="result screen">
 
 
             <div class="answerCard">
