@@ -11,7 +11,8 @@ const resultScreen = document.querySelector("#resultScreen");
 const progress = document.querySelector("#progress");
 //今何問目かを表示させるために使う
 const questionText = document.querySelector("#questionText");
-// 質問文を配列の要素から表示させるためにDOMをidから取得しておく
+// 質問文を配列の要素から表示させるために取得しておく
+const answerList = document.querySelector("#answerList");
 
 let currentQuestionIndex = 0;
 // 配列questionsの要素番号を格納する
@@ -27,13 +28,37 @@ function showScreen(targetScreen) {
 
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
-    // 質問はquestions.jsの配列questionsに書かれている
-    // currentquetionに要素を順次格納していく
     questionText.textContent = currentQuestion.text;
-    // 配列から要素番号で指定した質問文をHTMLに反映させる
+    // 質問文を取得して表示する
+
     progress.textContent = `${currentQuestionIndex + 1} / ${questions.length}`;
-    // 要素番号は0から始まるから1を足して問題数と合わせておく
+    // 現在の質問数をカウントする
+
+    answerList.innerHTML = "";
+    currentQuestion.options.forEach(function (option) {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.classList.add("answerButton");
+
+
+        button.addEventListener("click", function () {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questions.length) {
+                showQuestion();
+            } else {
+                showScreen(resultScreen);
+            }
+        });
+        // いずれかの回答ボタンをクリックすると質問数カウントが進む
+        //  回答した質問数と用意されている質問数が同じ以上になったら、結果画面に移る
+
+        answerList.appendChild(button);
+        // JSで作成した選択肢ボタンを子要素に入れて表示する
+    });
 };
+
+
 
 startButton.addEventListener("click", function () {
     currentQuestionIndex = 0;
