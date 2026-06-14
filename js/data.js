@@ -20,34 +20,3 @@ const platycerium = [
   { name: "クアドリディコトマム", water: "多め", size: "小さい", shape: "ふしぎ", price: "高い", difficulty: "難しい", growth: "遅い" },
 ];
 
-
-// ユーザーからの回答
-const userAnswers = {
-  water: "多め", size: "小さい", shape: "ふしぎ", obtain: "難しい"
-};
-
-// 原種と回答を比較する
-
-for (const platyceriumSample of platycerium) { // データベースの各要素を順番に変数へ格納していく繰り返し処理の書き方
-  // constは定数なので、forを回すたびに中身が変わる必要がある今回はfor文の中に入れる必要がある
-  let score = 0; // 性質が一致したらスコアを加算する式の合計値を格納する　大きいほどマッチしていることになる
-
-  if (platyceriumSample.water === userAnswers.water) { // ユーザーの選択と原種の性質が一致していたらスコアに1が足される
-    score++;
-  }
-  if (platyceriumSample.size === userAnswers.size) {
-    score++;
-  }
-  if (platyceriumSample.shape === userAnswers.shape) {
-    score++;
-  }
-  if (platyceriumSample.obtain === userAnswers.obtain) {
-    score++;
-  }
-
-  console.log(platyceriumSample.name);
-  console.log(score);
-
-};
-
-
