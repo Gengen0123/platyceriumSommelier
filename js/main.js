@@ -17,6 +17,7 @@ const answerList = document.querySelector("#answerList");
 let currentQuestionIndex = 0;
 // 配列questionsの要素番号を格納する
 
+const userAnswers = {};
 
 function showScreen(targetScreen) {
     startScreen.classList.remove("active");
@@ -42,6 +43,7 @@ function showQuestion() {
 
 
         button.addEventListener("click", function () {
+            userAnswers[currentQuestion.key] = option;
             currentQuestionIndex++;
 
             if (currentQuestionIndex < questions.length) {
