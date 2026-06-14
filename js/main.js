@@ -44,11 +44,15 @@ function showQuestion() {
 
         button.addEventListener("click", function () {
             userAnswers[currentQuestion.key] = option;
+            console.log(userAnswers);
+
             currentQuestionIndex++;
 
             if (currentQuestionIndex < questions.length) {
                 showQuestion();
             } else {
+                const resultPlant = diagnosisPlant(userAnswers);
+                console.log(resultPlant);
                 showScreen(resultScreen);
             }
         });

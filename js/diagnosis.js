@@ -1,6 +1,7 @@
 function diagnosisPlant(userAnswers) {
-    let bestPlant = null;
+    let bestPlants = [];
     let bestScore = -1;
+    // 全て0だった時、bestplantsがnullにならないようにするため
 
     platycerium.forEach(function (plant) {
         let score = 0;
@@ -23,6 +24,12 @@ function diagnosisPlant(userAnswers) {
         if (plant.grouth === userAnswers.grouth) {
             score++;
         }
+        if (score > bestScore) {
+            bestScore = score;
+            bestPlants = [plant];
+        } else if (score === bestScore) {
+            bestPlants.push(plant);
+        }
     });
-    return bestPlant;
-}
+    return bestPlants;
+};
