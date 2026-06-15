@@ -28,5 +28,5 @@ const questions = [
         key: "growth",
         text: "成長速度はどれくらいがいい？",
         options: ["早い", "普通", "遅い"]
-    },
+    }
 ];
