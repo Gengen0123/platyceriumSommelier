@@ -51,8 +51,8 @@ function showQuestion() {
             if (currentQuestionIndex < questions.length) {
                 showQuestion();
             } else {
-                const resultPlant = diagnosisPlant(userAnswers);
-                console.log(resultPlant);
+                const resultPlants = diagnosisPlant(userAnswers);
+                console.log(resultPlants);
                 showScreen(resultScreen);
             }
         });

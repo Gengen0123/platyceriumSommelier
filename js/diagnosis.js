@@ -21,7 +21,7 @@ function diagnosisPlant(userAnswers) {
         if (plant.difficulty === userAnswers.difficulty) {
             score++;
         }
-        if (plant.grouth === userAnswers.grouth) {
+        if (plant.growth === userAnswers.growth) {
             score++;
         }
         if (score > bestScore) {
