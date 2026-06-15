@@ -13,7 +13,7 @@ const progress = document.querySelector("#progress");
 const questionText = document.querySelector("#questionText");
 // 質問文を配列の要素から表示させるために取得しておく
 const answerList = document.querySelector("#answerList");
-
+const plantName = document.querySelector("#plantName");
 let currentQuestionIndex = 0;
 // 配列questionsの要素番号を格納する
 
@@ -53,6 +53,7 @@ function showQuestion() {
             } else {
                 const resultPlants = diagnosisPlant(userAnswers);
                 console.log(resultPlants);
+                showResult(resultPlants);
                 showScreen(resultScreen);
             }
         });
@@ -64,6 +65,12 @@ function showQuestion() {
     });
 };
 
+function showResult(resultPlants) {
+    const plantNames = resultPlants.map(function (plant) {
+        return plant.name;
+    });
+    plantName.textContent = plantNames.join(" / ");
+};
 
 
 startButton.addEventListener("click", function () {
