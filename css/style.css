@@ -1,8 +1,6 @@
 /* お手製リセットCSS */
 * {
     box-sizing: border-box;
-    /* heightやwidthをpaddingとborderが含まれた寸法にする */
-
 }
 
 h1,
@@ -14,7 +12,6 @@ body {
 
 button {
     font: inherit;
-    /* 親要素と同じフォントにする */
     cursor: pointer;
 }
 
@@ -22,24 +19,28 @@ a {
     text-decoration: none;
 }
 
-
-/*  このアプリ全体のレイアウトを決定する */
+/* アプリ全体 */
 .app {
     min-height: 100vh;
     display: flex;
-    /* 要素をFlexBoxにする */
-
     justify-content: center;
-    /* 要素を左右中央揃えにする */
 }
 
+/* セクション毎の表示管理 */
+.screen {
+    display: none;
+}
 
+.start.active,
+.question.active,
+.result.active {
+    display: flex;
+}
 
 /* スタート画面 */
 .start {
     min-height: 100vh;
     flex-direction: column;
-    /* 縦に要素を並べる */
 }
 
 .titleBand {
@@ -50,16 +51,15 @@ a {
 }
 
 .titleBand h1 {
-    margin: 20vh 0 20vh;
+    margin: 20vh 0;
     font-size: clamp(3em, 6vw, 6rem);
-    /* 最大、最小幅を指定できる 横長モニタ等で表示させるときに崩れない */
 }
 
 .start p {
     text-align: center;
     font-size: 1.3em;
     line-height: 2;
-    padding: 5vh 10vw 5vh;
+    padding: 5vh 10vw;
 }
 
 #startButton {
@@ -80,7 +80,6 @@ a {
     color: #ffffff;
 }
 
-
 /* 質問画面 */
 .question {
     flex-direction: column;
@@ -90,12 +89,20 @@ a {
     margin-top: 20px;
 }
 
+.question h1 {
+    font-size: 40px;
+}
+
 .questionText {
     margin-top: 2vh;
+    font-size: 20px;
+    line-height: 1.6;
 }
 
 .progress {
     color: rgb(26, 67, 125);
+    font-size: 24px;
+    margin-top: 8px;
 }
 
 .answerList {
@@ -105,7 +112,7 @@ a {
 }
 
 .answerButton {
-    margin: 10px 10px;
+    margin: 10px;
     padding: 15px;
     border: none;
     background-color: aquamarine;
@@ -120,70 +127,89 @@ a {
 /* 結果画面 */
 .result {
     flex-direction: column;
-    min-height: 100vh;
-    max-width: 800px;
-    margin: 0 10vw 0;
-}
-
-.answerCard {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 900px;
+    padding: 32px 24px 64px;
 }
-
 
 .result h1 {
-    font-size: 25px;
-    margin-top: 20px;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 24px;
 }
 
-.plantName {
-    font-size: 40px;
+.resultList {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 24px auto;
+}
+
+.resultCard {
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.resultCard h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
 }
 
 .resultImage {
-    width: 80vw;
+    width: 80%;
+    max-width: 420px;
     height: auto;
-    max-width: 500px;
     display: block;
-    margin: 25px 25px;
-    border-radius: 15%;
+    margin: 0 auto 12px;
+    border-radius: 12px;
 }
 
-.result h2 {
-    color: rgb(36, 36, 36);
-    font-size: 25px;
-    margin: 20px 0;
+.imageCredit {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.plantDescription {
+    line-height: 1.8;
+    text-align: left;
+    font-size: 16px;
 }
 
 .searchButton {
     display: inline-block;
-    /* aタグはinline要素。widthやheight等を効かせるために設定。 */
     background-color: aquamarine;
     color: black;
-    width: 200px;
-    padding: 10px;
-    margin: 15px auto;
+    width: 220px;
+    padding: 12px;
+    margin: 16px auto;
     text-align: center;
+    transition: background-color 0.2s;
+}
+
+.searchButton:hover {
+    background-color: rgb(26, 67, 125);
+    color: #ffffff;
 }
 
 .backToStartButton {
-    width: 200px;
-    padding: 10px;
+    width: 220px;
+    padding: 12px;
     margin: 0 auto;
     text-align: center;
     border: none;
     background-color: aqua;
+    transition: background-color 0.2s;
 }
 
-/* セクション毎の表示管理に使用 */
-/* hiddenだとdisplay:flexと衝突するかも　activeクラスで表示を管理 */
-.screen {
-    display: none;
-}
-
-.start.active,
-.question.active,
-.result.active {
-    display: flex;
+.backToStartButton:hover {
+    background-color: rgb(26, 67, 125);
+    color: #ffffff;
 }
