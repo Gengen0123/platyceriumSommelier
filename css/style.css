@@ -54,3 +54,23 @@ img {
     width: 100%;
     min-height: 100vh;
 }
+
+/* スタート画面 */
+
+.start h1 {
+    padding: 64px 16px 24px;
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+}
+
+.start p {
+    padding: 24px 16px;
+    line-height: 1.8;
+}
+
+#startButton {
+    width: calc(100% - 32px);
+    margin: 16px auto 0;
+    padding: 16px;
+}
