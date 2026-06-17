@@ -1,13 +1,18 @@
-/* お手製リセットCSS */
+/* リセット */
 * {
     box-sizing: border-box;
 }
 
+body,
 h1,
 h2,
-p,
-body {
+p {
     margin: 0;
+}
+
+body {
+    min-width: 320px;
+    font-size: 1rem;
 }
 
 button {
@@ -16,200 +21,36 @@ button {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* アプリ全体 */
 .app {
+    width: 100%;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
 }
 
-/* セクション毎の表示管理 */
+/* 画面切り替え */
 .screen {
     display: none;
 }
 
-.start.active,
-.question.active,
-.result.active {
+.screen.active {
     display: flex;
 }
 
-/* スタート画面 */
-.start {
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-.titleBand {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    background-color: aquamarine;
-}
-
-.titleBand h1 {
-    margin: 20vh 0;
-    font-size: clamp(3em, 6vw, 6rem);
-}
-
-.start p {
-    text-align: center;
-    font-size: 1.3em;
-    line-height: 2;
-    padding: 5vh 10vw;
-}
-
-#startButton {
-    background-color: aquamarine;
-    border: none;
-    border-radius: 30px;
-    padding: 30px;
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    transition: background-color 0.2s ease;
-    font-size: 2em;
-    letter-spacing: 0.04em;
-}
-
-#startButton:hover {
-    background-color: rgb(26, 67, 125);
-    color: #ffffff;
-}
-
-/* 質問画面 */
-.question {
-    flex-direction: column;
-    min-height: 100vh;
-    max-width: 400px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.question h1 {
-    font-size: 40px;
-}
-
-.questionText {
-    margin-top: 2vh;
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-.progress {
-    color: rgb(26, 67, 125);
-    font-size: 24px;
-    margin-top: 8px;
-}
-
-.answerList {
-    display: flex;
-    flex-direction: column;
-    padding-top: 3vh;
-}
-
-.answerButton {
-    margin: 10px;
-    padding: 15px;
-    border: none;
-    background-color: aquamarine;
-    transition: background-color 0.2s;
-}
-
-.answerButton:hover {
-    background-color: rgb(26, 67, 125);
-    color: #ffffff;
-}
-
-/* 結果画面 */
+/* 各画面の共通設定 */
+.start,
+.question,
 .result {
     flex-direction: column;
-    align-items: center;
+    width: 100%;
     min-height: 100vh;
-    width: 100%;
-    max-width: 900px;
-    padding: 32px 24px 64px;
-}
-
-.result h1 {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 24px;
-}
-
-.resultList {
-    width: 100%;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    margin: 24px auto;
-}
-
-.resultCard {
-    border: 1px solid #ddd;
-    border-radius: 16px;
-    padding: 24px;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-.resultCard h2 {
-    font-size: 36px;
-    margin-bottom: 16px;
-}
-
-.resultImage {
-    width: 80%;
-    max-width: 420px;
-    height: auto;
-    display: block;
-    margin: 0 auto 12px;
-    border-radius: 12px;
-}
-
-.imageCredit {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.plantDescription {
-    line-height: 1.8;
-    text-align: left;
-    font-size: 16px;
-}
-
-.searchButton {
-    display: inline-block;
-    background-color: aquamarine;
-    color: black;
-    width: 220px;
-    padding: 12px;
-    margin: 16px auto;
-    text-align: center;
-    transition: background-color 0.2s;
-}
-
-.searchButton:hover {
-    background-color: rgb(26, 67, 125);
-    color: #ffffff;
-}
-
-.backToStartButton {
-    width: 220px;
-    padding: 12px;
-    margin: 0 auto;
-    text-align: center;
-    border: none;
-    background-color: aqua;
-    transition: background-color 0.2s;
-}
-
-.backToStartButton:hover {
-    background-color: rgb(26, 67, 125);
-    color: #ffffff;
 }
