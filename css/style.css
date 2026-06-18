@@ -51,26 +51,70 @@ img {
 .question,
 .result {
     flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
 }
 
-/* スタート画面 */
+button {
+    width: calc(100% - 64px);
+    padding: 16px;
+    margin: 0 auto;
+}
+
+/* =====スタート画面====== */
 
 .start h1 {
-    padding: 64px 16px 24px;
+    padding: 64px 0 24px 0;
     font-size: 2rem;
     line-height: 1;
     text-align: center;
 }
 
 .start p {
-    padding: 24px 16px;
+    padding: 24px;
     line-height: 1.8;
 }
 
-#startButton {
-    width: calc(100% - 32px);
-    margin: 16px auto 0;
-    padding: 16px;
+/* =====質問画面===== */
+.question h1 {
+    padding: 32px 16px 16px;
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+}
+
+.progress {
+    margin: 0 auto;
+    font-size: 1rem;
+    min-height: 3.2em;
+    line-height: 1.6;
+}
+
+.questionText {
+    margin: 24px;
+    font-size: 1.1rem;
+    min-height: 3.2em;
+    line-height: 1.6;
+}
+
+.answerList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+/* ======結果画面===== */
+
+.result h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.result h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.resultCard {
+    border: solid black;
 }
