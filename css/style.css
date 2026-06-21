@@ -3,16 +3,10 @@
     box-sizing: border-box;
 }
 
-body,
 h1,
 h2,
 p {
     margin: 0;
-}
-
-body {
-    min-width: 320px;
-    font-size: 1rem;
 }
 
 a {
@@ -27,6 +21,34 @@ img {
 }
 
 /* アプリ全体 */
+:root {
+    /* ページ全体の背景色 */
+    --color-background: #f4f6f1;
+    /* 開始ボタン・検索ボタンの背景色 */
+    --color-button: #4f7258;
+    /* 回答ボタンなどのhover時に使う薄い緑 */
+    --color-button-light: #e5eee7;
+    /* ボタンの枠線・hover時の濃い緑 */
+    --color-button-border: #365843;
+    /* 結果カード・回答ボタンの背景色 */
+    --color-surface: #ffffff;
+    /* 結果カードの枠線色 */
+    --color-card-border: #d4ddd5;
+    /* 見出し・本文の基本文字色 */
+    --color-text: #263029;
+    /* 進捗・画像提供などの補足文字色 */
+    --color-text-muted: #6b756e;
+}
+
+body {
+    min-width: 320px;
+    font-size: 1rem;
+
+    background-color: var(--color-background);
+    font-family: "Noto Sans JP", sans-serif;
+    color: var(--color-text);
+}
+
 .app {
     width: 100%;
     min-height: 100vh;
@@ -41,9 +63,43 @@ button,
     padding: 24px;
     margin: 0 auto;
 
+    border: solid 2px;
+    border-radius: 48px;
     font: inherit;
+    font-weight: bold;
+    letter-spacing: 0.2em;
     text-align: center;
     cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+/* ボタン各種 */
+#startButton,
+.searchButton {
+    border-color: var(--color-button);
+    background-color: var(--color-button);
+    color: #ffffff;
+}
+
+.answerButton,
+.backToStartButton {
+    border-color: var(--color-button-border);
+    background-color: var(--color-surface);
+    color: var(--color-button-border);
+}
+
+#startButton:hover,
+.searchButton:hover {
+    background-color: var(--color-button-light);
+    color: var(--color-button);
+}
+
+.answerButton:hover,
+.backToStartButton:hover {
+    background-color: var(--color-button);
+    color: #ffffff;
 }
 
 /* 画面切り替え */
@@ -73,9 +129,11 @@ button,
 }
 
 .start p {
+    margin-bottom: 32px;
     padding: 32px;
     line-height: 1.8;
 }
+
 
 /* =====質問画面===== */
 .question h1 {
@@ -89,6 +147,7 @@ button,
     margin: 0 auto;
     font-size: 1rem;
     line-height: 1.6;
+    color: var(--color-text-muted);
 }
 
 .questionText {
@@ -105,6 +164,9 @@ button,
     align-items: center;
     gap: 32px;
 }
+
+
+
 
 /* ======結果画面===== */
 .result {
@@ -127,8 +189,10 @@ button,
 }
 
 .resultCard {
-    border: solid black;
+    border: 2px solid var(--color-card-border);
+    border-radius: 24px;
     margin: 0 32px 24px;
+    background-color: var(--color-surface);
 }
 
 .resultCard h2 {
@@ -136,15 +200,15 @@ button,
 }
 
 .resultImage {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
+    margin: 12px auto;
+    width: calc(100% - 32px);
+    border-radius: 24px;
 }
 
 .imageCredit {
     font-size: 0.9rem;
     margin: 8px;
+    color: var(--color-text-muted);
 }
 
 .plantDescription {
@@ -155,23 +219,14 @@ button,
 }
 
 .searchButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     margin: 24px auto;
-    background-color: #aaaaaa;
-}
-
-.backToStartButton {
-    /* margin: 32px; */
 }
 
 
 /* iPadminiより大きい画面に対して設定してみる */
 @media (min-width:768px) {
     .start h1 {
-        padding: 64px 0 64apx 0;
+        padding: 64px 0 64px 0;
         font-size: 3.5rem;
     }
 
@@ -179,19 +234,19 @@ button,
     .searchButton {
         min-height: 64px;
         font-size: 1.25rem;
+
     }
 
 
     .start p {
         padding: 96px;
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 0 auto 48px;
         line-height: 2.5;
         font-size: 1.5rem;
     }
 
     .question {
-        width: 100%;
         max-width: 800px;
         margin: 0 auto;
     }
@@ -212,14 +267,13 @@ button,
     }
 
     .result {
-        width: 100%;
         max-width: 1000px;
         margin: 0 auto 96px;
         padding: 0 32px;
     }
 
     .result h1 {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
         margin: 96px 0 96px 0;
     }
 
@@ -229,25 +283,17 @@ button,
     }
 
     .resultList {
-        width: 100%;
         max-width: 800px;
         margin: 0 auto;
     }
 
     .resultCard {
-        border: solid black;
         margin: 0 128px 96px;
     }
 
-    .resultCard h2 {
-        margin: 8px;
-    }
-
     .resultImage {
-        display: block;
         margin: 0 auto;
-        width: 100%;
-        height: auto;
+        width: calc(100% - 96px);
     }
 
     .imageCredit {
