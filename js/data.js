@@ -81,7 +81,7 @@ const platycerium = [
     growth: "早い",
     description: "最もスタンダードな原種のひとつ。流通量が多く、丈夫で育てやすいため、初心者にもおすすめです。",
     image: "images/bifurcatum.png",
-    imageCredit: "未設定"
+    imageCredit: "えにし(X:@enishi18361)"
   },
   {
     name: "ヒリー",
@@ -105,7 +105,7 @@ const platycerium = [
     growth: "普通",
     description: "大きく広がる貯水葉が魅力の原種。迫力があり、壁掛けで育てると存在感が出ます。",
     image: "images/superbum.png",
-    imageCredit: "未設定"
+    imageCredit: "えにし(X:@enishi18361)"
   },
   {
     name: "ベイチー",
@@ -117,7 +117,7 @@ const platycerium = [
     growth: "普通",
     description: "銀白色の葉が美しい原種。乾燥に比較的強く、シャープでかっこいい印象を楽しめます。",
     image: "images/veitchii.png",
-    imageCredit: "未設定"
+    imageCredit: "えにし(X:@enishi18361)"
   },
   {
     name: "ウィリンキー",
@@ -129,7 +129,7 @@ const platycerium = [
     growth: "普通",
     description: "細長く伸びる胞子葉が魅力の原種。スタイリッシュな見た目で、人気の高いビカクシダです。",
     image: "images/willinckii.png",
-    imageCredit: "未設定"
+    imageCredit: "えにし(X:@enishi18361)"
   },
   {
     name: "アンディナム",
