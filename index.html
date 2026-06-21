@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ビカリエ</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="js/questions.js" defer></script>
     <script src="js/data.js" defer></script>
     <script src="js/diagnosis.js" defer></script>
@@ -16,14 +18,11 @@
 <body>
     <main class="app">
         <section id="startScreen" class="start screen active">
-            <div class="titleBand">
-                <h1>ビカクシダソムリエ</h1>
-            </div>
-
+            <h1>ビカクシダソムリエ</h1>
             <p>
-                インテリアプランツとしてここ数年の間で大きく名を馳せたビカクシダ。
-                <br>育ててみたいけれど初心者だから枯らさないか心配、どんな品種があるのか知りたい。
-                <br>そんなあなたに、ビカクシダの原種18種からおすすめの品種を診断します。
+                ビカクシダは、個性的な見た目とインテリアとしての飾りやすさから人気を集めている観葉植物です。
+                いくつかの質問に答えると、18種の原種の中からあなたにぴったりのビカクシダをご提案します。
+
             </p>
 
             <button id="startButton">
@@ -34,6 +33,7 @@
         <section id="questionScreen" class="question screen">
             <h1>質問</h1>
             <p id="progress" class="progress">1 / 6</p>
+
             <p id="questionText" class="questionText"></p>
 
             <div id="answerList" class="answerList"></div>
