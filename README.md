@@ -5,7 +5,7 @@
 6つの質問に回答すると、回答内容と各品種の特徴を比較し、スコアの高いビカクシダを診断結果として表示します。
 
 <p align="center">
-  <img src="./docs/demo.gif" alt="ビカクシダソムリエの診断デモ" height="50%">
+  <img src="./docs/demo.gif" alt="ビカクシダソムリエの診断デモ" height="400">
 </p>
 
 ## 概要
