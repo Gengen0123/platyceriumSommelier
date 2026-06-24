@@ -9,7 +9,7 @@ const platycerium = [
     growth: "普通",
     description: "大きく広がる葉と独特な雰囲気が魅力の原種。存在感があり、インテリアの主役になりやすいビカクシダです。",
     image: "images/coronarium.png",
-    imageCredit: "未設定"
+    imageCredit: "みんく 様 (X : @D1yK6)"
   },
   {
     name: "グランデ",
@@ -69,7 +69,7 @@ const platycerium = [
     growth: "普通",
     description: "大型で迫力のある姿が魅力の原種。インパクトのある株を育てたい人に向いています。",
     image: "images/wandae.png",
-    imageCredit: "未設定"
+    imageCredit: "かみかぜ 様 (X : @kamikaze_plants)"
   },
   {
     name: "ビフルカツム",
@@ -81,7 +81,7 @@ const platycerium = [
     growth: "早い",
     description: "最もスタンダードな原種のひとつ。流通量が多く、丈夫で育てやすいため、初心者にもおすすめです。",
     image: "images/bifurcatum.png",
-    imageCredit: "えにし(X:@enishi18361)"
+    imageCredit: "えにし (X : @enishi18361)"
   },
   {
     name: "ヒリー",
@@ -105,7 +105,7 @@ const platycerium = [
     growth: "普通",
     description: "大きく広がる貯水葉が魅力の原種。迫力があり、壁掛けで育てると存在感が出ます。",
     image: "images/superbum.png",
-    imageCredit: "えにし(X:@enishi18361)"
+    imageCredit: "えにし (X : @enishi18361)"
   },
   {
     name: "ベイチー",
@@ -117,7 +117,7 @@ const platycerium = [
     growth: "普通",
     description: "銀白色の葉が美しい原種。乾燥に比較的強く、シャープでかっこいい印象を楽しめます。",
     image: "images/veitchii.png",
-    imageCredit: "えにし(X:@enishi18361)"
+    imageCredit: "えにし (X : @enishi18361)"
   },
   {
     name: "ウィリンキー",
@@ -129,7 +129,7 @@ const platycerium = [
     growth: "普通",
     description: "細長く伸びる胞子葉が魅力の原種。スタイリッシュな見た目で、人気の高いビカクシダです。",
     image: "images/willinckii.png",
-    imageCredit: "えにし(X:@enishi18361)"
+    imageCredit: "えにし (X : @enishi18361)"
   },
   {
     name: "アンディナム",
@@ -153,7 +153,7 @@ const platycerium = [
     growth: "早い",
     description: "比較的育てやすく、バランスの良い姿に育ちやすい原種。はじめての原種にも選びやすい種類です。",
     image: "images/alcicorne.png",
-    imageCredit: "未設定"
+    imageCredit: "食べちゃん 様 (X : @tabetyandesu)"
   },
   {
     name: "エレファントティス",
@@ -165,7 +165,7 @@ const platycerium = [
     growth: "普通",
     description: "幅広で丸みのある葉姿が特徴的な原種。名前の通り、どっしりとした印象を楽しめます。",
     image: "images/elephantotis.png",
-    imageCredit: "未設定"
+    imageCredit: "かずくさ 様 (X : @AKazukusa)"
   },
   {
     name: "エリシー",
@@ -213,6 +213,6 @@ const platycerium = [
     growth: "遅い",
     description: "小型で個性的な姿を持つ希少性の高い原種。独特な雰囲気を楽しみたい人向けです。",
     image: "images/quadridichotomum.png",
-    imageCredit: "未設定"
+    imageCredit: "鈴木君 様 (X : @DIJd0btaLr7wdM3)"
   }
 ];
